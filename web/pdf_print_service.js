@@ -204,6 +204,10 @@ PDFPrintService.prototype = {
 
 let print = window.print;
 window.print = function print() {
+  if (!pdfjsPrintAccessible) {
+		console.warn('You do not have permission to print.');
+		return;
+	}
   if (activeService) {
     console.warn('Ignored window.print() because of a pending print job.');
     return;

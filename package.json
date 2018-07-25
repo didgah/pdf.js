@@ -42,7 +42,8 @@
     "yargs": "^11.1.0"
   },
   "scripts": {
-    "test": "gulp lint unittestcli externaltest"
+    "test": "gulp lint unittestcli externaltest",
+    "publish": "gulp publish"
   },
   "repository": {
     "type": "git",
